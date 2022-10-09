@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+// import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Maps extends StatefulWidget {
   const Maps({Key? key}) : super(key: key);
@@ -9,45 +9,45 @@ class Maps extends StatefulWidget {
 }
 
 class _MapsState extends State<Maps> {
-  late GoogleMapController mapController;
+  // late GoogleMapController mapController;
 
-  final LatLng _center = const LatLng(28.644800, 77.216721);
+  // final LatLng _center = const LatLng(28.644800, 77.216721);
 
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-  }
+  // void _onMapCreated(GoogleMapController controller) {
+  //   mapController = controller;
+  // }
 
-  Map<MarkerId, Marker> markers = <MarkerId, Marker>{
-    MarkerId('marker_id_1'): Marker(
-      markerId: MarkerId('marker_id_1'),
-      position: LatLng(28.644800, 77.216721),
-      infoWindow: InfoWindow(title: 'marker_id_1', snippet: '*'),
-      onTap: () {
-        //_onMarkerTapped(markerId);
-        print('Marker Tapped');
-      },
-      onDragEnd: (LatLng position) {
-        print('Drag Ended');
-      },
-    )
-  };
+  // Map<MarkerId, Marker> markers = <MarkerId, Marker>{
+  //   MarkerId('marker_id_1'): Marker(
+  //     markerId: MarkerId('marker_id_1'),
+  //     position: LatLng(28.644800, 77.216721),
+  //     infoWindow: InfoWindow(title: 'marker_id_1', snippet: '*'),
+  //     onTap: () {
+  //       //_onMarkerTapped(markerId);
+  //       print('Marker Tapped');
+  //     },
+  //     onDragEnd: (LatLng position) {
+  //       print('Drag Ended');
+  //     },
+  //   )
+  // };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          GoogleMap(
-            onMapCreated: _onMapCreated,
-            initialCameraPosition: CameraPosition(
-              target: _center,
-              zoom: 11.0,
-            ),
-            mapType: MapType.normal,
-            markers: Set<Marker>.of(markers.values),
-            //onMapCreated: (GoogleMapController controller) {
-            //  _controller.complete(controller);
-            //},
-          ),
+          // GoogleMap(
+          //   onMapCreated: _onMapCreated,
+          //   initialCameraPosition: CameraPosition(
+          //     target: _center,
+          //     zoom: 11.0,
+          //   ),
+          //   mapType: MapType.normal,
+          //   markers: Set<Marker>.of(markers.values),
+          //   //onMapCreated: (GoogleMapController controller) {
+          //   //  _controller.complete(controller);
+          //   //},
+          // ),
           InkWell(
             onTap: () {
               Navigator.pop(context);
